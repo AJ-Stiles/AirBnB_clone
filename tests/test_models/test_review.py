@@ -6,6 +6,7 @@ Unittests for Review class.
 import unittest
 from models.review import Review
 
+
 class TestReview(unittest.TestCase):
     """
     Test cases for Review class.
@@ -24,6 +25,6 @@ class TestReview(unittest.TestCase):
         self.assertTrue(hasattr(review, "updated_at"))
         self.assertTrue(hasattr(review, "id"))
 
+
 if __name__ == "__main__":
     unittest.main()
-

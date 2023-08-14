@@ -6,6 +6,7 @@ BaseModel module: Defines the BaseModel class.
 import uuid
 from datetime import datetime
 
+
 class BaseModel:
     """
     BaseModel class defines common attributes/methods for other classes.
@@ -41,7 +42,8 @@ class BaseModel:
 
     def save(self):
         import models
-        """Save the instance to the storage and call the storage save method."""
+        """Save the instance to the storage and call
+        the storage save method."""
         self.updated_at = datetime.now()
         models.storage.new(self)
         models.storage.save()
@@ -52,6 +54,7 @@ class BaseModel:
         instance_dict['created_at'] = self.created_at.isoformat()
         instance_dict['updated_at'] = self.updated_at.isoformat()
         return instance_dict
+
 
 if __name__ == '__main__':
     my_dict = {

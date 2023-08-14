@@ -5,6 +5,7 @@ Place module: Defines the Place class that inherits from BaseModel.
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """
     Place class inherits from BaseModel and defines place attributes.
@@ -24,4 +25,3 @@ class Place(BaseModel):
     def __init__(self, *args, **kwargs):
         """Initialize Place instance."""
         super().__init__(*args, **kwargs)
-

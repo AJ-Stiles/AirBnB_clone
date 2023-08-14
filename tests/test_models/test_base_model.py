@@ -7,6 +7,7 @@ import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 
+
 class TestBaseModel(unittest.TestCase):
     def test_instance_creation(self):
         model = BaseModel()
@@ -40,9 +41,11 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(model_dict["__class__"], "BaseModel")
         self.assertIsInstance(model_dict["created_at"], str)
         self.assertIsInstance(model_dict["updated_at"], str)
-        self.assertEqual(model_dict["created_at"], model.created_at.isoformat())
-        self.assertEqual(model_dict["updated_at"], model.updated_at.isoformat())
-    
+        self.assertEqual(model_dict["created_at"],
+                         model.created_at.isoformat())
+        self.assertEqual(model_dict["updated_at"],
+                         model.updated_at.isoformat())
+
     def test_instance_from_dict(self):
         my_dict = {
             'id': '12345',
@@ -54,10 +57,11 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(my_model, BaseModel)
         self.assertEqual(my_model.id, '12345')
         self.assertEqual(my_model.created_at,
-                         datetime.strptime('2023-08-01T12:00:00.000000', '%Y-%m-%dT%H:%M:%S.%f'))
+                         datetime.strptime('2023-08-01T12:00:00.000000',
+                                           '%Y-%m-%dT%H:%M:%S.%f'))
         self.assertEqual(my_model.name, 'Sample Name')
         self.assertEqual(my_model.my_number, 42)
 
+
 if __name__ == '__main__':
     unittest.main()
-

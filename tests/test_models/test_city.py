@@ -6,6 +6,7 @@ Unittests for City class.
 import unittest
 from models.city import City
 
+
 class TestCity(unittest.TestCase):
     """
     Test cases for City class.
@@ -22,6 +23,6 @@ class TestCity(unittest.TestCase):
         self.assertTrue(hasattr(city, "updated_at"))
         self.assertTrue(hasattr(city, "id"))
 
+
 if __name__ == "__main__":
     unittest.main()
-

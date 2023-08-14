@@ -5,6 +5,7 @@ City module: Defines the City class that inherits from BaseModel.
 
 from models.base_model import BaseModel
 
+
 class City(BaseModel):
     """
     City class inherits from BaseModel and defines city attributes.
@@ -15,4 +16,3 @@ class City(BaseModel):
     def __init__(self, *args, **kwargs):
         """Initialize City instance."""
         super().__init__(*args, **kwargs)
-

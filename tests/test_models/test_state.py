@@ -6,6 +6,7 @@ Unittests for State class.
 import unittest
 from models.state import State
 
+
 class TestState(unittest.TestCase):
     """
     Test cases for State class.
@@ -20,6 +21,6 @@ class TestState(unittest.TestCase):
         self.assertTrue(hasattr(state, "updated_at"))
         self.assertTrue(hasattr(state, "id"))
 
+
 if __name__ == "__main__":
     unittest.main()
-
